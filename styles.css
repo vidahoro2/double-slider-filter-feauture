@@ -1,0 +1,61 @@
+/* Estilo para el contenedor del control deslizante */
+#range-price-container {
+    position: relative; /* Permite posicionar el texto flotante */
+  }
+  
+  /* Estilo para el texto flotante */
+  #range-price-label {
+    position: absolute; /* Posiciona el texto flotante */
+    top: -20px; /* Distancia desde el control deslizante */
+    left: 0; /* Posicionamiento horizontal */
+    font-size: 14px; /* Tamaño de la fuente */
+    color: #333; /* Color del texto */
+  }
+  /* Estilo para el track seleccionado */
+input[type=range]::-webkit-slider-runnable-track {
+    background: #ddd; /* Color de fondo del track */
+}
+
+input[type=range]::-webkit-slider-runnable-track:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Ancho de la barra de selección */
+    background: #000; /* Color de fondo de la barra de selección */
+}
+/* Estilo para el contenedor del indicador */
+#range-price-indicator {
+    position: absolute; /* Posiciona el indicador */
+    top: -15px; /* Distancia desde el control deslizante */
+    left: 0; /* Posicionamiento horizontal */
+    width: 100%; /* Ancho del indicador */
+    height: 2px; /* Altura del indicador */
+    background: #f00; /* Color de fondo del indicador */
+  }
+  
+  /* Estilo para el primer punto de control (mínimo) */
+  input[type=range]::-webkit-slider-thumb:first-of-type:after {
+    content: "";
+    position: absolute;
+    top: -20px; /* Distancia desde el punto de control */
+    left: 50%; /* Posicionamiento horizontal */
+    transform: translateX(-50%); /* Centra el indicador */
+    width: 2px; /* Ancho del indicador */
+    height: 20px; /* Altura del indicador */
+    background: #f00; /* Color de fondo del indicador */
+  }
+  
+  /* Estilo para el segundo punto de control (máximo) */
+  input[type=range]::-webkit-slider-thumb:last-of-type:after {
+    content: "";
+    position: absolute;
+    top: -20px; /* Distancia desde el punto de control */
+    left: 50%; /* Posicionamiento horizontal */
+    transform: translateX(-50%); /* Centra el indicador */
+    width: 2px; /* Ancho del indicador */
+    height: 20px; /* Altura del indicador */
+    background: #00f; /* Color de fondo del indicador */
+  }
+  
